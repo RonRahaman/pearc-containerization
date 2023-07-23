@@ -8,8 +8,7 @@
 
   * HPC: Lustre and NFS
   * Kubernetes:  CEPH and VAST
-    * Seem likes a black box
-    * Options: AWS S3 bucket?  NFS export.  
+    * Options: Example: AWS S3 bucket with  NFS export.  
       - How do you communicate the options to users?  Seems like there needs
         to be a matrix for users to choose
 
@@ -19,14 +18,16 @@ User namespace issues exiting physical volumes.  How to provision UIDs
 
 ### Using reference data
 
-BioInformatics: Lots of reference data. Users download data to /scratch.
-Global project colleciton.  E.g: BLAST database.  On Lustre.  
+BioInformatics
+* Lots of reference data
+* Gathering data in one place rather than downloading separate images
+* How would multiple containers share that data
 
 ## Security
 - Container creation and security
-  - How to have scalable solutions
-  - Is running uprileged sufficient?
-  - Registries?
+  - How to have scalable solutions?  Vulnerability scanners
+    in registries?  Criteria for trust?
+  - Is running unprileged sufficient?
 
 # Documentation
 
@@ -35,17 +36,18 @@ Global project colleciton.  E.g: BLAST database.  On Lustre.
 # Use cases
 
 ### Different storage strategies for different workflows
-- Streams of data and ingest; is analysis decoupled.  
-  How do we do analysis?  There might be a better file 
-  severice for analysis vs ingest
-- Lots of parallel read/write operations
+- Streams of data and ingest vs. decoupled analysis
+- Ideal: concurrently
 
-- Scheduler: Storage as a resource
+### Storage as a resource
+- Storage as a resource
 
 ### OS Library compatibility
-GLIBC compatibility on Centos 7 / RHEL 7
+- GLIBC compatibility on Centos 7 / RHEL 7
 
 # Best practices
+
+- Ultimate goal.  How to get 
 
 
 
